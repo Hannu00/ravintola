@@ -57,12 +57,20 @@ main {
     align-items: center;
 }
 
+#main-nav-links li, .cart-container img, .nav-logo-box {
+    transition: transform 0.3s ease;
+}
+
+#main-nav-links li:hover, .cart-container img:hover, .nav-logo-box:hover {
+    transform: scale(1.1);
+}
 
 nav a {
     font-family: "Arial", cursive;
     color: var(--text-color);
     text-decoration: none;
     margin: 0 10px;
+
 }
 
 nav img {

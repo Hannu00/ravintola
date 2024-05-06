@@ -28,12 +28,25 @@ const postLogin = async (email, password) => {
             sessionStorage.setItem("token", data.token);
             sessionStorage.setItem("user", JSON.stringify(data.user));
             message.innerHTML = data.message + ", redirecting..."
-            setTimeout(() => {
-                window.location.href = "index.html";
-            }, 2000);
+
+            // Check if there's an intended destination stored in the session storage
+            const intendedDestination = sessionStorage.getItem("intendedDestination");
+            if (intendedDestination) {
+                // Redirect the user to the intended destination
+                setTimeout(() => {
+                    window.location.href = intendedDestination;
+                }, 2000);
+                // Clear the intended destination from the session storage
+                sessionStorage.removeItem("intendedDestination");
+            } else {
+                setTimeout(() => {
+                    window.location.href = "index.html";
+                }, 2000);
+            }
         } else {
             message.innerHTML = data.message;
         }
     } catch (error) {
+        console.log(error);
     }
 }

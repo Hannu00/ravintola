@@ -1,9 +1,6 @@
 .root-container {
-    background-image: url('/media/pizza-menu.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     flex: 2;
+    background-color: #9c9c9c;
 }
 
 
@@ -16,9 +13,9 @@
     width: 25rem;
     background-color: rgb(255, 255, 255);
     color: rgb(32,37,54);
-    background-blend-mode: multiply;
-    background-size: cover;
-    background-repeat: no-repeat;
+    border-left:solid 3px rgb(32,37,54);
+    border-top: solid 3px rgb(32,37,54);
+    border-bottom: solid 3px rgb(32,37,54);
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     padding-bottom: 20px;
@@ -58,6 +55,9 @@ h1 {
     width: 30rem;
     background-color: rgb(32,37,54);
     padding: 0 30px 30px 30px;
+    border-right:solid 3px #f2f2f2;
+    border-top: solid 3px #f2f2f2;
+    border-bottom: solid 3px #f2f2f2;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     max-height: 500px;
@@ -91,7 +91,7 @@ tbody td {
 
 .order-summary button {
     margin: 20px auto auto;
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
     background-color: rgb(255, 255, 255);
