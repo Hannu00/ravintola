@@ -289,10 +289,6 @@ footer {
 
 @media screen and (max-width: 768px) {
 
-    footer {
-        padding: 0;
-    }
-
     #social-icons {
         margin-top: 0.5rem;
     }

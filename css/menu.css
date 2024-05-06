@@ -37,14 +37,6 @@ main {
     margin: 4em auto;
 }
 
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
 .mySlides img {
     width: 100%;
     border: solid 1px gold;
@@ -231,16 +223,16 @@ main {
         background-position: 0 40px;
     }
 
-    .root-container {
-        width: 100%;
-    }
-
     .cart-button {
         font-size: 20px;
     }
 
     .menu-table {
         max-width: 90%;
+    }
+
+    .pizza-slide {
+        width: 80%;
     }
 }
 
@@ -251,6 +243,10 @@ main {
         width: 100%;
     }
 
+    .pizza-slide {
+        width: 80%;
+    }
+
     .menu-cell {
         font-size: x-small;
     }
@@ -259,10 +255,6 @@ main {
         font-size: 4em;
     }
 
-
-    .root-container {
-        width: 100%;
-    }
 
     .cart-button {
         font-size: 20px;
