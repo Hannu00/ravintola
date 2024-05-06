@@ -91,7 +91,7 @@ main {
 
 .menu-cell.price,
 .menu-header .menu-cell.price {
-    max-width: 100px;
+    min-width: 93px;
     text-align: center;
 }
 

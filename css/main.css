@@ -8,13 +8,11 @@
 }
 
 header {
-
     width: 100%;
     position: fixed;
     flex-shrink: 1;
     flex-grow: 0;
     background-color: rgb(32,37,54);
-    z-index: 1000;
 }
 
 :root {
