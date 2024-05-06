@@ -156,7 +156,6 @@ main {
     flex: 1;
 }
 
-
 .cart-button {
     border: none;
     font-size: 30px;
@@ -178,6 +177,19 @@ main {
 .product-allergens {
     color: #888;
     font-size: 0.8em;
+}
+
+.pizza-slide {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.pizza-banner-slides {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0.25em;
 }
 
 @media screen and (max-width: 1300px) {
