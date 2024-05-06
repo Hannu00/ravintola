@@ -89,6 +89,12 @@ main {
     flex: 0 1 auto;
 }
 
+.menu-cell.price,
+.menu-header .menu-cell.price {
+    max-width: 100px;
+    text-align: center;
+}
+
 
 .menu-cell:not(:first-child):not(:last-child) {
     border-left: 1px solid rgba(221, 221, 221, 0.35);
