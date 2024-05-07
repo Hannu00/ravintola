@@ -1,7 +1,3 @@
-body {
-    color: black;
-}
-
 .root-container {
     margin: auto;
     justify-content: center;
@@ -17,4 +13,8 @@ body {
 #save-button {
     margin: 10px auto auto;
     width: 20%;
+}
+
+.account-management {
+    color: black;
 }

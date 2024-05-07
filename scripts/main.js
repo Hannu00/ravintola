@@ -4,6 +4,10 @@ import {authenticateAdmin} from "./api/fetchCalls.js";
 const signupButton = document.getElementById('login-button')
 const logOutButton = document.getElementById('logout-button')
 const accountButton = document.getElementById('account-button')
+const signupButtonMobile = document.getElementById('login-button-mobile')
+const logOutButtonMobile = document.getElementById('logout-button-mobile')
+const accountButtonMobile = document.getElementById('account-button-mobile')
+
 const cartCount = document.getElementById('cart-count')
 
 // const productCount = JSON.parse(sessionStorage.getItem('shoppingCart')) || []
@@ -12,6 +16,10 @@ if (sessionStorage.getItem('token')) {
     signupButton.style.display = 'none'
     logOutButton.style.display = 'block'
     accountButton.style.display = 'block'
+
+    signupButtonMobile.style.display = 'none'
+    logOutButtonMobile.style.display = 'block'
+    accountButtonMobile.style.display = 'block'
 
     await accessAdminPanel(sessionStorage.getItem('token'))
 }
@@ -46,9 +54,15 @@ logOutButton.addEventListener('click', () => {
 });
 
 const hamburgerIcon = document.getElementById('hamburger-icon')
+const hamburgerIconSideBar = document.getElementById('hamburger-icon-sidebar')
 const sidebar = document.getElementById('side-bar')
 hamburgerIcon.addEventListener('click', () => {
     sidebar.classList.toggle('show')
+});
+
+hamburgerIconSideBar.addEventListener('click', () => {
+    sidebar.classList.toggle('show')
+
 });
 
 
