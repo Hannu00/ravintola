@@ -24,6 +24,19 @@ export const getProducts = async () => {
     }
 }
 
+export const getOrdersByCustomerId = async (id) => {
+    try {
+        const response = await fetch(`http://10.120.32.55/app/api/v1/orders/customer/${id}`);
+        const data = await response.json();
+        if (response.ok) {
+            console.log(data)
+            return data;
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 export const postOrder = async (user, address, items, totalPriceValue) => {
     try {
         const response = await fetch("http://10.120.32.55/app/api/v1/orders/", {
@@ -120,7 +133,8 @@ export async function authenticateAdmin(token) {
         if (response.ok) {
             return true;
         }
-    } catch (error) {}
+    } catch (error) {
+    }
 }
 
 export async function createProduct(product, token) {

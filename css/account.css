@@ -3,11 +3,7 @@
     justify-content: center;
     align-items: center;
     display: flex;
-}
-
-.edit-form {
-    display: flex;
-    flex-direction: column;
+    background-color: #9c9c9c;
 }
 
 #save-button {
@@ -15,6 +11,95 @@
     width: 20%;
 }
 
-.account-management {
+.account-management-container {
+    display: flex;
+    flex-direction: column;
     color: black;
+}
+
+.account-content-container {
+    display: flex;
+    padding: 1rem;
+}
+
+.account-information {
+    border-left: solid 3px rgb(32, 37, 54);
+    border-top: solid 3px rgb(32, 37, 54);
+    border-bottom: solid 3px rgb(32, 37, 54);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #ffffff;
+}
+
+.account-orders {
+    border-right: solid 3px #f2f2f2;
+    border-top: solid 3px #f2f2f2;
+    border-bottom: solid 3px #f2f2f2;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgb(32,37,54);
+    color: white;
+}
+
+.account-orders, .account-information {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    gap: 2rem;
+}
+
+#order-title, #account-title {
+    font-size: 1.3em;
+}
+
+#order-title {
+    border-bottom: 1px solid #ffffff;
+}
+
+#account-title {
+    border-bottom: 1px solid #000000
+}
+
+.edit-form, .order-history {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.order-history {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.order-item {
+    text-align: left;
+}
+
+
+.order-headers, .order-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.order-items {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+}
+
+.order-items.visible {
+    max-height: 500px;
+}
+
+.order-row:hover {
+    background-color: #faabab;
 }
