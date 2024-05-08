@@ -54,6 +54,7 @@ main {
     letter-spacing: 1px;
     font-size: large;
     align-items: center;
+    padding-left: 0;
 }
 
 #main-nav-links li, .cart-container img, .nav-logo-box {
@@ -181,7 +182,7 @@ body {
 .proceed-to-checkout-button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: rgb(50, 55, 70);
     color: #fff;
     border: none;
     cursor: pointer;
@@ -190,7 +191,7 @@ body {
 }
 
 .proceed-to-checkout-button:hover {
-    background-color: #0056b3;
+    background-color: rgb(32, 37, 54);
 }
 
 .single-price {

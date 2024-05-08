@@ -6,13 +6,11 @@ const shoppingCart = JSON.parse(sessionStorage.getItem('shoppingCart'));
 console.log(shoppingCart);
 
 const createUserData = (user) => {
-    editForm.firstName.placeholder = user.first_name;
-    editForm.lastName.placeholder = user.last_name;
-    editForm.email.placeholder = user.email;
-    editForm.phone.placeholder = user.phone;
-    editForm.address.placeholder = user.address;
-    editForm.password.placeholder = "********";
-    editForm.confirmPassword.placeholder = "********";
+    editForm.firstName.value = user.first_name;
+    editForm.lastName.value = user.last_name;
+    editForm.email.value = user.email;
+    editForm.phone.value = user.phone;
+    editForm.address.value = user.address;
 }
 
 const editForm = document.querySelector('.edit-form');
@@ -42,8 +40,13 @@ customerOrders.forEach(order => {
 const orderIds = customerOrders.map(order => order.order.order_id);
 console.log('order ids', orderIds);
 
+const orderHistoryContainer = document.getElementById('account-orders');
+
 const orderHistory = document.createElement('div');
 orderHistory.classList.add('order-history');
+
+const orderHistoryHeaderContainer = document.createElement('div');
+orderHistoryHeaderContainer.classList.add('order-history-headers');
 
 let ordersWithProducts = {};
 
@@ -64,7 +67,6 @@ for (let orderId of orderIds) {
 
 console.log(ordersWithProducts);
 
-const orderHistoryContainer = document.getElementById('account-orders');
 
 const orderHeaderRow = document.createElement('div');
 orderHeaderRow.classList.add('order-headers');
@@ -94,7 +96,7 @@ orderIds.forEach(orderId => {
     orderStatusCell.textContent = orderDateAndStatus[orderId].status;
     orderRow.appendChild(orderStatusCell);
 
-    orderHistory.appendChild(orderRow);
+    orderHistoryHeaderContainer.appendChild(orderRow);
 
     const orderItemsContainer = document.createElement('div');
     orderItemsContainer.classList.add('order-items');
@@ -106,7 +108,7 @@ orderIds.forEach(orderId => {
         orderItemsContainer.appendChild(itemDiv);
     }
 
-    orderHistory.appendChild(orderItemsContainer);
+    orderHistoryHeaderContainer.appendChild(orderItemsContainer);
 
     orderRow.addEventListener('click', () => {
         console.log('Order row clicked');
@@ -121,3 +123,4 @@ orderIds.forEach(orderId => {
 });
 
 orderHistoryContainer.appendChild(orderHistory);
+orderHistory.appendChild(orderHistoryHeaderContainer);
