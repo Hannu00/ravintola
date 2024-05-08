@@ -216,10 +216,7 @@ export const updateUser = async (id, modifiedUser, token) => {
             body: JSON.stringify(modifiedUser)
         });
         const data = await response.json();
-        if (response.ok) {
-            console.log(data)
-            return response.status;
-        }
+        return {status: response.status, ...data};
     } catch (error) {
         console.log(error);
     }
