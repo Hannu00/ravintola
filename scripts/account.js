@@ -48,26 +48,6 @@ orderHistory.classList.add('order-history');
 const orderHistoryHeaderContainer = document.createElement('div');
 orderHistoryHeaderContainer.classList.add('order-history-headers');
 
-let ordersWithProducts = {};
-
-for (let orderId of orderIds) {
-    let orderProducts = {};
-    const orderItems = await getOrderItemsByOrderId(orderId);
-
-    orderItems.forEach(item => {
-        if (orderProducts[item.name]) {
-            orderProducts[item.name].quantity += 1;
-        } else {
-            orderProducts[item.name] = { quantity: 1 };
-        }
-    });
-
-    ordersWithProducts[orderId] = orderProducts;
-}
-
-console.log(ordersWithProducts);
-
-
 const orderHeaderRow = document.createElement('div');
 orderHeaderRow.classList.add('order-headers');
 
@@ -101,16 +81,10 @@ orderIds.forEach(orderId => {
     const orderItemsContainer = document.createElement('div');
     orderItemsContainer.classList.add('order-items');
 
-    for (let itemName in ordersWithProducts[orderId]) {
-        const itemDiv = document.createElement('div');
-        itemDiv.classList.add('order-item');
-        itemDiv.textContent = `${itemName}: ${ordersWithProducts[orderId][itemName].quantity}`;
-        orderItemsContainer.appendChild(itemDiv);
-    }
 
     orderHistoryHeaderContainer.appendChild(orderItemsContainer);
 
-    orderRow.addEventListener('click', () => {
+    orderRow.addEventListener('click', async () => {
         console.log('Order row clicked');
         if (orderItemsContainer.classList.contains('visible')) {
             console.log('Hiding order items');
@@ -118,6 +92,22 @@ orderIds.forEach(orderId => {
         } else {
             console.log('Showing order items');
             orderItemsContainer.classList.add('visible');
+
+            orderItemsContainer.innerHTML = '';
+
+            const orderItems = await getOrderItemsByOrderId(orderId);
+
+            const itemCounts = orderItems.reduce((counts, item) => {
+                counts[item.name] = (counts[item.name] || 0) + 1;
+                return counts;
+            }, {});
+
+            for (const [itemName, quantity] of Object.entries(itemCounts)) {
+                const itemDiv = document.createElement('div');
+                itemDiv.classList.add('order-item');
+                itemDiv.textContent = `${itemName}: ${quantity}`;
+                orderItemsContainer.appendChild(itemDiv);
+            }
         }
     });
 });
