@@ -62,6 +62,9 @@ orderHeaderRow.appendChild(statusHeader);
 orderHistory.appendChild(orderHeaderRow);
 
 orderIds.forEach(orderId => {
+    const orderContainer = document.createElement('div'); // Create a new container for each order
+    orderContainer.classList.add('order-container');
+
     const orderRow = document.createElement('div');
     orderRow.classList.add('order-row');
 
@@ -76,13 +79,12 @@ orderIds.forEach(orderId => {
     orderStatusCell.textContent = orderDateAndStatus[orderId].status;
     orderRow.appendChild(orderStatusCell);
 
-    orderHistoryHeaderContainer.appendChild(orderRow);
+    orderContainer.appendChild(orderRow);
 
     const orderItemsContainer = document.createElement('div');
     orderItemsContainer.classList.add('order-items');
 
-
-    orderHistoryHeaderContainer.appendChild(orderItemsContainer);
+    orderContainer.appendChild(orderItemsContainer); // Append the items container to the new container
 
     orderRow.addEventListener('click', async () => {
         console.log('Order row clicked');
@@ -110,6 +112,8 @@ orderIds.forEach(orderId => {
             }
         }
     });
+
+    orderHistoryHeaderContainer.appendChild(orderContainer);
 });
 
 orderHistoryContainer.appendChild(orderHistory);
