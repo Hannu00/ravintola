@@ -6,34 +6,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="../media/pizza.png"/>
+    <link rel="icon" type="image/x-icon" href="media/pizza.png"/>
     <title>Menu</title>
-    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/menu.css"/>
-    <script src="../scripts/menu.js" defer type="module"></script>
-    <script src="../scripts/main.js" type="module" defer></script>
-    <script src="../scripts/carousel.js" defer></script>
-    <script src="/scripts/language-switcher.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/menu.css"/>
+    <script src="scripts/menu.js" defer type="module"></script>
+    <script src="scripts/main.js" type="module" defer></script>
+    <script src="scripts/carousel.js" defer></script>
 </head>
 <body>
 <header>
     <nav id="main-nav" aria-label="Main navigation">
         <span id="hamburger-icon">&#9776</span>
-        <div id="title-div">
+        <div>
             <a class="nav-logo-box" href="index.html">
                 PIZZERIA EN RICO
-                <img class="icon" alt="pizza-oven" src="../media/pizza-oven.png"/>
+                <img class="icon" src="media/pizza-oven.png"/>
             </a>
-            <label for="language-select"></label>
-            <select id="language-select">
-                <option value="en">English</option>
-                <option value="fi">Finnish</option>
-            </select>
         </div>
         <ul id="main-nav-links">
             <div class="cart-container">
                 <span id="cart-count">0</span>
-                <img src="../media/shopping-bag.png" alt="Pizza Oven" class="icon" id="shoppingCart"/>
+                <img src="media/shopping-bag.png" alt="Pizza Oven" class="icon" id="shoppingCart"/>
                 <div class="cart-content" id="cartContent">
                     <div id="cartProducts">
 
@@ -55,7 +49,7 @@
             <h1>Our menu</h1>
         </div>
         <div class="menu-container" id="menu">
-            <img id="menu-top-img" alt="top-image-menu" src="/media/menu.png"/>
+            <img id="menu-top-img" src="/media/menu.png"/>
             <div class="menu-table" id="pizza-list">
                 <h2>Our pizzas</h2>
                 <div class="menu-row menu-header">
@@ -63,8 +57,8 @@
             </div>
             <div class="banner-ads">
                 <div class="pizza-banner-slides">
-                    <img class="pizza-slide" alt="pizza-banner" src="/media/pizza-banner.png"/>
-                    <img class="pizza-slide" alt="pizza-banner" src="/media/pizza-sale.png"/>
+                    <img class="pizza-slide" src="/media/pizza-banner.png"/>
+                    <img class="pizza-slide" src="/media/pizza-sale.png"/>
                 </div>
                 <div class="menu-table" id="salad-list">
                     <h2>Our Salads</h2>
@@ -75,15 +69,15 @@
                 <div class="slideshow-container">
 
                     <div class="mySlides fade">
-                        <img src="/media/caprese-salad.jpg" alt="caprese-salad" style="width:100%">
+                        <img src="/media/caprese-salad.jpg" style="width:100%">
                     </div>
 
                     <div class="mySlides fade">
-                        <img src="/media/ceaser-salad.jpg" alt="ceaser-salad" style="width:100%">
+                        <img src="/media/ceaser-salad.jpg" style="width:100%">
                     </div>
 
                     <div class="mySlides fade">
-                        <img src="/media/greek-salad.jpg" alt="greek-salad" style="width:100%">
+                        <img src="/media/greek-salad.jpg" style="width:100%">
                     </div>
 
                 </div>
@@ -113,10 +107,12 @@
 <nav id="side-bar" aria-label="Sidebar Navigation">
     <span id="hamburger-icon-sidebar">&#9776</span>
     <ul id="side-bar-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="checkout.html">Order</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="menu.html">MENU</a></li>
+        <li><a href="login.html" id="login-button-mobile">SIGN IN</a></li>
+        <li><a href="account.html" id="account-button-mobile" style="display: none">ACCOUNT</a></li>
+        <li><a href="index.html" id="logout-button-mobile" style="display: none">LOG OUT</a></li>
+        <li><a href="about.html">ABOUT</a></li>
     </ul>
 </nav>
 <footer>
@@ -124,10 +120,10 @@
         <h3>Pizzeria En Rico</h3>
         <p>© 2024 Pizzeria En Rico. All rights reserved.</p>
         <div id="social-icons">
-            <img src="/media/twitter.png" alt="X">
-            <img src="/media/facebook-app-symbol.png" alt="F">
-            <img src="/media/instagram.png" alt="I">
-            <img src="/media/business.png" alt="In">
+        <img src="/media/twitter.png" alt="X">
+        <img src="/media/facebook-app-symbol.png" alt="F">
+        <img src="/media/instagram.png" alt="I">
+        <img src="/media/business.png" alt="In">
         </div>
     </div>
 </footer>

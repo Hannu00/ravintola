@@ -184,8 +184,6 @@ main {
 .pizza-slide {
     animation-name: fade;
     animation-duration: 1.5s;
-    width: 40%;
-    height: 100vh;
 }
 
 .pizza-banner-slides {
@@ -232,6 +230,10 @@ main {
     .menu-table {
         max-width: 90%;
     }
+
+    .pizza-slide {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -239,6 +241,10 @@ main {
         margin: 2em 0.25em;
         height: auto;
         width: 100%;
+    }
+
+    .pizza-slide {
+        width: 80%;
     }
 
     .menu-cell {
@@ -258,4 +264,5 @@ main {
         max-width: 90%;
     }
 }
+
 

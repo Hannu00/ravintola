@@ -204,10 +204,10 @@ const displayCartContents = () => {
         proceedToCheckoutButton.classList.add("proceed-to-checkout-button");
         proceedToCheckoutButton.addEventListener("click", () => {
             if (sessionStorage.getItem("token")) {
-                window.location.href = "checkout_fi.html";
+                window.location.href = "checkout.html";
             } else {
-                sessionStorage.setItem("intendedDestination", "checkout_fi.html");
-                window.location.href = "login_fi.html";
+                sessionStorage.setItem("intendedDestination", "checkout.html");
+                window.location.href = "login.html";
             }
         });
 

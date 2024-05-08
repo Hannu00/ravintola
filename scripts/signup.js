@@ -44,7 +44,7 @@ const postSignup = async (firstName, lastName, email, phone, address, password) 
         if (response.status === 201) {
             message.innerHTML = data.message + ", redirecting..."
             setTimeout(() => {
-                window.location.href = "login_fi.html";
+                window.location.href = "login.html";
             }, 2000);
         } else {
             message.innerHTML = data.message;

@@ -232,15 +232,6 @@ footer {
     list-style: none;
 }
 
-#title-div {
-    display: flex;
-    flex-direction: row;
-}
-
-#title-div select {
-    margin: 0 1em;
-}
-
 #hamburger-icon-sidebar {
     position: absolute;
     right: 10px;
@@ -304,6 +295,8 @@ footer {
 #social-icons img:hover {
     filter: drop-shadow(0 0 15px black);
 }
+
+/* Responsive styles */
 
 @media screen and (max-width: 768px) {
 
