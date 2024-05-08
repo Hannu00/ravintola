@@ -98,7 +98,7 @@ const handleOrder = (success) => {
         document.querySelector(".order-completed").style.display = "block";
         setTimeout(() => {
             sessionStorage.removeItem("shoppingCart");
-            window.location.href = "index.html";
+            window.location.href = "index_fi.html";
         }, 3000)
     } else {
         modal.style.display = "flex";
@@ -111,7 +111,7 @@ const handleOrder = (success) => {
 }
 
 if (!sessionStorage.getItem("token")) {
-    window.location.href = "../index.html";
+    window.location.href = "../en/index.html";
 } else {
     user = JSON.parse(sessionStorage.getItem('user'));
     shoppingCart = JSON.parse(sessionStorage.getItem('shoppingCart'));

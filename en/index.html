@@ -1,26 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <title>Pizzeria En Rico</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <script src="scripts/main.js" type="module" defer></script>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <script src="../scripts/main.js" type="module" defer></script>
+    <script src="/scripts/language-switcher.js"></script>
 </head>
 <body>
 <header>
     <nav id="main-nav" aria-label="Main navigation">
         <span id="hamburger-icon">&#9776</span>
-        <div>
+        <div id="title-div">
             <a class="nav-logo-box" href="index.html">
                 PIZZERIA EN RICO
-                <img class="icon" src="media/pizza-oven.png"/>
+                <img class="icon" alt="pizza-oven" src="../media/pizza-oven.png"/>
             </a>
+            <label for="language-select"></label>
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="fi">Finnish</option>
+            </select>
         </div>
         <ul id="main-nav-links">
             <div class="cart-container">
                 <span id="cart-count">0</span>
-                <img src="media/shopping-bag.png" alt="Pizza Oven" class="icon" id="shoppingCart"/>
+                <img src="../media/shopping-bag.png" alt="Pizza Oven" class="icon" id="shoppingCart"/>
                 <div class="cart-content" id="cartContent">
                     <div id="cartProducts">
                     </div>
@@ -60,7 +67,7 @@
         </main>
         <div class="center-div">
             <div id="center-div-left">
-                <img class="icon" id="pizza-icon-index" src="./media/pizza-center.png">
+                <img class="icon" id="pizza-icon-index" alt="pizza-icon" src="../media/pizza-center.png">
                 <h1>Special traditional recipes since 1924</h1>
 
                 <h2>Indulge in our time-honored recipes, crafted with passion and expertise passed down through generations.
@@ -69,8 +76,21 @@
                 <h2>Immerse yourself in an unforgettable dining experience that transcends time.</h2>
             </div>
             <div id="center-div-right">
-                <img src="media/pizza-making-index.jpg">
+                <img src="../media/pizza-making-index.jpg" alt="pizza-making">
                 <p>Pizza made with love!</p>
+            </div>
+        </div>
+        <div class="presentation-div">
+            <div id="upper-center-div">
+                <h1>Our Menu</h1>
+                <p>&nbsp;</p>
+                <h2>What we offer</h2>
+            </div>
+            <div id="lower-center-div">
+                <img src="/media/mozzarella-about.jpg" alt="pizza">
+                <img src="/media/greek-salad.jpg" alt="salad">
+                <img src="/media/bruschetta.jpg" alt="appetizer">
+                <img src="/media/kebab.jpg" alt="kebab">
             </div>
         </div>
     </div>

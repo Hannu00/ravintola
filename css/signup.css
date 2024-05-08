@@ -19,7 +19,7 @@
 
 .signup-container {
     margin-top: 70px;
-    width: 500px;
+    width: 25%;
     padding: 10px;
     background-color: rgb(32,37,54);
     box-shadow: rgba(0, 0, 0, 0.2) 0 60px 40px -7px;
@@ -29,11 +29,11 @@
 }
 
 .signup-container label {
-    margin-bottom: 7px;
+    margin: auto;
 }
 
 .signup-container input {
-    width: 100%;
+    width: 24vw;
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;

@@ -19,7 +19,7 @@ const editForm = document.querySelector('.edit-form');
 let user
 
 if (!sessionStorage.getItem("token")) {
-    window.location.href = 'index.html';
+    window.location.href = 'index_fi.html';
 } else {
     user = JSON.parse(sessionStorage.getItem('user'));
     createUserData(user);

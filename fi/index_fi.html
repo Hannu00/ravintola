@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria En Rico</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <script src="../scripts/main.js" type="module" defer></script>
+    <script src="/scripts/language-switcher.js"></script>
+</head>
+<body>
+<header>
+    <nav id="main-nav" aria-label="Päävalikko">
+        <span id="hamburger-icon">&#9776</span>
+        <div id="title-div">
+            <a class="nav-logo-box" href="index_fi.html">
+                PIZZERIA EN RICO
+                <img class="icon" alt="pizza-oven" src="../media/pizza-oven.png"/>
+            </a>
+            <label for="language-select"></label>
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="fi">Finnish</option>
+            </select>
+        </div>
+        <ul id="main-nav-links">
+            <div class="cart-container">
+                <span id="cart-count">0</span>
+                <img src="../media/shopping-bag.png" alt="Pizza Oven" class="icon" id="shoppingCart"/>
+                <div class="cart-content" id="cartContent">
+                    <div id="cartProducts">
+                    </div>
+                </div>
+            </div>
+            <li><a href="index_fi.html">KOTI</a></li>
+            <li><a href="menu_fi.html">MENU</a></li>
+            <li><a href="login_fi.html" id="login-button">KIRJAUDU SISÄÄN</a></li>
+            <li><a href="account_fi.html" id="account-button" style="display: none">TILI</a></li>
+            <li><a href="index_fi.html" id="logout-button" style="display: none">KIRJAUDU ULOS</a></li>
+            <li><a href="about_fi.html">TIETOA</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="root-container">
+    <main>
+        <div id="top-image-container">
+            <div class="enrico">
+                <span class="red">P</span>
+                <span class="white">i</span>
+                <span class="green">z</span>
+                <span class="red">z</span>
+                <span class="white">e</span>
+                <span class="green">r</span>
+                <span class="red">i</span>
+                <span class="white">a</span>
+                <span class="red"> </span>
+                <span class="white">E</span>
+                <span class="green">n</span>
+                <span class="red"> </span>
+                <span class="green">R</span>
+                <span class="red">i</span>
+                <span class="white">c</span>
+                <span class="green">o</span>
+            </div>
+        </div>
+    </main>
+    <div class="center-div">
+        <div id="center-div-left">
+            <img class="icon" id="pizza-icon-index" alt="pizza-icon" src="../media/pizza-center.png">
+            <h1>Erikoisia perinteisiä reseptejä vuodesta 1924</h1>
+
+            <h2>Nauti aikaa kunnioittavista resepteistämme, jotka on valmistettu intohimolla ja sukupolvelta toiselle periytyneellä asiantuntemuksella.
+                Pizzeria En Ricossa kutsutaan maistamaan aitojen makujen ydintä, jotka ovat ilahduttaneet makunystyröitä lähes vuosisadan ajan.</h2>
+
+            <h2>Upota itsesi unohtumattomaan ruokaelämykseen, joka ylittää ajan.</h2>
+        </div>
+        <div id="center-div-right">
+            <img src="../media/pizza-making-index.jpg" alt="pizza-making">
+            <p>Pizzaa rakkaudella valmistettuna!</p>
+        </div>
+    </div>
+    <div class="presentation-div">
+        <div id="upper-center-div">
+            <h1>Ruokalistamme</h1>
+            <p>&nbsp;</p>
+            <h2>Mitä tarjoamme</h2>
+        </div>
+        <div id="lower-center-div">
+            <img src="/media/mozzarella-about.jpg" alt="pizza">
+            <img src="/media/greek-salad.jpg" alt="salad">
+            <img src="/media/bruschetta.jpg" alt="appetizer">
+            <img src="/media/kebab.jpg" alt="kebab">
+        </div>
+    </div>
+</div>
+<nav id="side-bar" aria-label="Sivupalkin navigointi">
+    <span id="hamburger-icon-sidebar">&#9776</span>
+    <ul id="side-bar-links">
+        <li><a href="index_fi.html">Koti</a></li>
+        <li><a href="menu_fi.html">Menu</a></li>
+        <li><a href="about_fi.html">Tietoa</a></li>
+        <li><a href="checkout_fi.html">Tilaa</a></li>
+    </ul>
+</nav>
+<div id="order-banner">
+    <h3>Tilaa nyt +35819283745</h3>
+</div>
+<footer>
+    <div class="footer-content">
+        <h3>Pizzeria En Rico</h3>
+        <p>© 2024 Pizzeria En Rico. Kaikki oikeudet pidätetään.</p>
+        <div id="social-icons">
+            <img src="/media/twitter.png" alt="X">
+            <img src="/media/facebook-app-symbol.png" alt="F">
+            <img src="/media/instagram.png" alt="I">
+            <img src="/media/business.png" alt="In">
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <title>Tilaa</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/checkout.css"/>
+    <script src="../scripts/main.js" type="module" defer></script>
+    <script src="../scripts/checkout.js" type="module" defer></script>
+    <script src="/scripts/language-switcher.js"></script>
+</head>
+<body>
+<header>
+    <nav id="main-nav" aria-label="Päävalikko">
+        <span id="hamburger-icon">&#9776</span>
+        <div id="title-div">
+            <a class="nav-logo-box" href="index_fi.html">
+                PIZZERIA EN RICO
+                <img class="icon" alt="pizza-oven" src="../media/pizza-oven.png"/>
+            </a>
+            <label for="language-select"></label>
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="fi">Finnish</option>
+            </select>
+        </div>
+        <ul id="main-nav-links">
+            <div class="cart-container">
+                <span id="cart-count">0</span>
+                <img src="../media/shopping-bag.png" alt="Pizza Oven" class="icon" id="shoppingCart"/>
+                <div class="cart-content" id="cartContent">
+                    <div id="cartProducts">
+                    </div>
+                </div>
+            </div>
+            <li><a href="index_fi.html">KOTI</a></li>
+            <li><a href="menu_fi.html">MENU</a></li>
+            <li><a href="login_fi.html" id="login-button">KIRJAUDU SISÄÄN</a></li>
+            <li><a href="account_fi.html" id="account-button" style="display: none">TILI</a></li>
+            <li><a href="index_fi.html" id="logout-button" style="display: none">KIRJAUDU ULOS</a></li>
+            <li><a href="about_fi.html">TIETOA</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="root-container">
+    <main>
+        <div class="order-container">
+            <div class="customer-information">
+                <h1>Tietosi</h1>
+                <form id="order-form">
+                    <label for="firstname">Etunimi</label>
+                    <input type="text" name="firstname" id="firstname" placeholder="Etunimi"
+                           autocomplete="given-name"
+                           readonly/>
+
+                    <label for="lastname">Sukunimi</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Sukunimi" autocomplete="family-name"
+                           readonly/>
+
+                    <label for="email">Sähköpostiosoite</label>
+                    <input type="email" name="email" id="email" placeholder="Sähköpostiosoite" autocomplete="email"
+                           readonly/>
+
+                    <label for="phone">Puhelinnumero</label>
+                    <input type="tel" name="phone" id="phone" placeholder="Puhelinnumero" autocomplete="tel" readonly/>
+
+                    <label for="address">Osoite</label>
+                    <input type="text" name="address" id="address" placeholder="Osoite" autocomplete="street-address"
+                           required/>
+                </form>
+            </div>
+            <div class="order-summary">
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="../media/checked.png" alt="order-completed" id="order-completed"/>
+                <img src="../media/delete.png" alt="order-not-completed" id="order-not-completed"/>
+                <div class="order-completed">
+                    <h1>Tilaus valmis</h1>
+                    <p>Tilauksesi onnistui!</p>
+                </div>
+                <div class="order-not-completed">
+                    <h1>Tilaus ei onnistunut</h1>
+                    <p>Tilauksen tekemisessä tapahtui virhe. Yritä myöhemmin uudelleen.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<nav id="side-bar" aria-label="Sivupalkin navigointi">
+    <span id="hamburger-icon-sidebar">&#9776</span>
+    <ul id="side-bar-links">
+        <li><a href="index_fi.html">Koti</a></li>
+        <li><a href="menu_fi.html">Menu</a></li>
+        <li><a href="about_fi.html">Tietoa</a></li>
+        <li><a href="checkout_fi.html">Tilaa</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>

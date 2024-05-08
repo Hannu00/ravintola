@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tilinhallinta</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/account.css">
+    <script src="../scripts/account.js" defer></script>
+    <script src="../scripts/main.js" type="module" defer></script>
+    <script src="/scripts/language-switcher.js"></script>
+</head>
+<body>
+<header>
+    <nav id="main-nav" aria-label="Päävalikko">
+        <span id="hamburger-icon">&#9776</span>
+        <div id="title-div">
+            <a class="nav-logo-box" href="index_fi.html">
+                PIZZERIA EN RICO
+                <img class="icon" alt="pizza-oven" src="../media/pizza-oven.png"/>
+            </a>
+            <label for="language-select"></label>
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="fi">Finnish</option>
+            </select>
+        </div>
+        <ul id="main-nav-links">
+            <div class="cart-container">
+                <span id="cart-count">0</span>
+                <img src="../media/shopping-bag.png" alt="Pizza Oven" class="icon" id="shoppingCart"/>
+                <div class="cart-content" id="cartContent">
+                    <div id="cartProducts">
+
+                    </div>
+                </div>
+            </div>
+            <li><a href="index_fi.html">KOTI</a></li>
+            <li><a href="menu_fi.html">MENU</a></li>
+            <li><a href="login_fi.html" id="login-button">KIRJAUDU SISÄÄN</a></li>
+            <li><a href="account_fi.html" id="account-button" style="display: none">TILI</a></li>
+            <li><a href="index_fi.html" id="logout-button" style="display: none">KIRJAUDU ULOS</a></li>
+            <li><a href="about_fi.html">TIETOA</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="root-container">
+    <div class="account-management">
+        <h1>Tilinhallinta</h1>
+        <form class="edit-form">
+            <label for="firstName">Etunimi</label>
+            <input type="text" id="firstName" name="firstName" >
+            <label for="lastName">Sukunimi</label>
+            <input type="text" id="lastName" name="lastName" >
+            <label for="email">Sähköposti</label>
+            <input type="email" id="email" name="email" >
+            <label for="phone">Puhelin</label>
+            <input type="tel" id="phone" name="phone" >
+            <label for="address">Osoite</label>
+            <input type="text" id="address" name="address" >
+            <label for="password">Salasana</label>
+            <input type="password" id="password" name="password">
+            <label for="confirmPassword">Vahvista salasana</label>
+            <input type="password" id="confirmPassword" name="confirmPassword">
+            <button type="submit" id="save-button">Tallenna</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

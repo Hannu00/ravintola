@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Order Page</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css"/>
-    <link rel="stylesheet" type="text/css" href="css/checkout.css"/>
-    <script src="scripts/main.js" type="module" defer></script>
-    <script src="scripts/checkout.js" type="module" defer></script>
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/checkout.css"/>
+    <script src="../scripts/main.js" type="module" defer></script>
+    <script src="../scripts/checkout.js" type="module" defer></script>
+    <script src="/scripts/language-switcher.js"></script>
 </head>
 <body>
 <header>
     <nav id="main-nav" aria-label="Main navigation">
         <span id="hamburger-icon">&#9776</span>
-        <div>
+        <div id="title-div">
             <a class="nav-logo-box" href="index.html">
                 PIZZERIA EN RICO
-                <img class="icon" src="media/pizza-oven.png"/>
+                <img class="icon" alt="pizza-oven" src="../media/pizza-oven.png"/>
             </a>
+            <label for="language-select"></label>
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="fi">Finnish</option>
+            </select>
         </div>
         <ul id="main-nav-links">
             <div class="cart-container">
                 <span id="cart-count">0</span>
-                <img src="media/shopping-bag.png" alt="Pizza Oven" class="icon" id="shoppingCart"/>
+                <img src="../media/shopping-bag.png" alt="Pizza Oven" class="icon" id="shoppingCart"/>
                 <div class="cart-content" id="cartContent">
                     <div id="cartProducts">
                     </div>
@@ -68,8 +74,8 @@
         <div id="modal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <img src="media/checked.png" alt="order-completed" id="order-completed"/>
-                <img src="media/delete.png" alt="order-not-completed" id="order-not-completed"/>
+                <img src="../media/checked.png" alt="order-completed" id="order-completed"/>
+                <img src="../media/delete.png" alt="order-not-completed" id="order-not-completed"/>
                 <div class="order-completed">
                     <h1>Order Completed</h1>
                     <p>Your order has been placed successfully!</p>

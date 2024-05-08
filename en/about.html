@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/about.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/about.css">
     <title>About En Rico</title>
-    <script src="scripts/main.js" type="module" defer></script>
+    <script src="../scripts/main.js" type="module" defer></script>
+    <script src="/scripts/language-switcher.js"></script>
 </head>
 <body>
 <header>
     <nav id="main-nav" aria-label="Main navigation">
         <span id="hamburger-icon">&#9776</span>
-        <div>
+        <div id="title-div">
             <a class="nav-logo-box" href="index.html">
                 PIZZERIA EN RICO
-                <img class="icon" src="media/pizza-oven.png"/>
+                <img class="icon" alt="pizza-oven" src="../media/pizza-oven.png"/>
             </a>
+            <label for="language-select"></label>
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="fi">Finnish</option>
+            </select>
         </div>
         <ul id="main-nav-links">
             <div class="cart-container">
                 <span id="cart-count">0</span>
-                <img src="media/shopping-bag.png" alt="Pizza Oven" class="icon" id="shoppingCart"/>
+                <img src="../media/shopping-bag.png" alt="Pizza Oven" class="icon" id="shoppingCart"/>
                 <div class="cart-content" id="cartContent">
                     <div id="cartProducts">
 
@@ -49,10 +55,10 @@
         </div>
         <div id="right-container">
             <div>
-                <img src="/media/mozzarella-about.jpg" alt="holder">
+                <img src="/media/mozzarella-about.jpg" alt="mozzarella-holder">
             </div>
             <div>
-                <img src="/media/salad-about.jpg" alt="holder">
+                <img src="/media/salad-about.jpg" alt="salad-holder">
             </div>
 
         </div>
